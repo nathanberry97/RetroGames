@@ -23,31 +23,28 @@ class pongGame:
         self.white = white
 
     def player(self):
-        pygame.draw.rect(self.display, self.white, [self.paddleX,
-                                                    self.paddleY,
-                                                    10,
-                                                    50])
+        pygame.draw.rect(self.display,
+                         self.white,
+                         [self.paddleX, self.paddleY, 10, 50])
 
     def ball(self):
-        pygame.draw.circle(self.display, self.white,
+        pygame.draw.circle(self.display,
+                           self.white,
                            (self.ballX, self.ballY),
                            self.ballRadius)
 
     def border(self):
-        pygame.draw.rect(self.display, self.white, [self.borderX,
-                                                    self.topBorderY,
-                                                    365,
-                                                    10])
+        pygame.draw.rect(self.display,
+                         self.white,
+                         [self.borderX, self.topBorderY, 365, 10])
 
-        pygame.draw.rect(self.display, self.white, [self.borderX,
-                                                    self.bottomBorderY,
-                                                    365,
-                                                    10])
+        pygame.draw.rect(self.display,
+                         self.white,
+                         [self.borderX, self.bottomBorderY, 365, 10])
 
-        pygame.draw.rect(self.display, self.white, [self.borderX,
-                                                    self.topBorderY,
-                                                    10,
-                                                    280])
+        pygame.draw.rect(self.display,
+                         self.white,
+                         [self.borderX, self.topBorderY, 10, 280])
 
     def ballMovement(self):
 
