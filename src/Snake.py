@@ -1,5 +1,7 @@
-import pygame, random
+import pygame
+import random
 pygame.init()
+
 
 class snakeGame:
     run = False
@@ -27,38 +29,45 @@ class snakeGame:
         self.green = green
         self.white = white
         self.red = red
-    
+
     def snakeHead(self):
         for i in self.snakeList:
-            pygame.draw.rect(self.display, self.green, [i[0], i[1], self.size, self.size])
+            pygame.draw.rect(self.display,
+                             self.green,
+                             [i[0], i[1], self.size, self.size])
 
-    def totalScore (self):
-        value = self.font.render("Your score: " + str(self.score), True, self.white)
+    def totalScore(self):
+        value = self.font.render("Your score: " + str(self.score),
+                                 True,
+                                 self.white)
+
         self.display.blit(value, [0, 0])
 
     def apple(self):
-        pygame.draw.rect(self.display, self.red, [self.appleX, self.appleY, self.size, self.size])
+        pygame.draw.rect(self.display,
+                         self.red,
+                         [self.appleX, self.appleY, self.size, self.size])
 
     def movement(self):
         move = pygame.key.get_pressed()
 
         if self.snakeX < 0:
             self.run = False
-       
+
         elif move[pygame.K_LEFT]:
             self.moveX = -self.snakeSpeed
             self.moveY = 0
 
         elif self.snakeX > 400:
             self.run = False
-        
+
         elif move[pygame.K_RIGHT]:
             self.moveX = self.snakeSpeed
             self.moveY = 0
 
         elif self.snakeY < 0:
             self.run = False
-        
+
         elif move[pygame.K_UP]:
             self.moveY = -self.snakeSpeed
             self.moveX = 0
