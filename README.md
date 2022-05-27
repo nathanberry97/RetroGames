@@ -25,7 +25,7 @@ would like to play.
 
 ## Snake
 
-![images](image/snake.png)
+![image](images/snake.png)
 
 Within the Snake file it contains the methods needed to allow the Main.py file
 to run the program.
@@ -34,7 +34,7 @@ the snakes speed based upon the score.
 
 ## Pong
 
-![images](image/pong.png)
+![image](images/pong.png)
 
 Within the Pong file it contains the methods needed to allow the Main.py file
 to run the program.
