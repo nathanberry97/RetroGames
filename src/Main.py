@@ -118,7 +118,7 @@ def main():
 
         pygame.display.update()
 
-    pygame.quit
+    pygame.quit()
 
 
 main()
